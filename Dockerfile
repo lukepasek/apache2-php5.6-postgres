@@ -5,8 +5,7 @@
 FROM httpd
 
 RUN apt-get update 
-RUN apt-get remove php5
-RUN apt-get -y install apache2 apache2-dev flex bison libxml2-dev libcurl4-openssl-dev libjpeg-dev libpng-dev libxpm-dev libpq-dev libicu-dev libfreetype6-dev libldap2-dev libxslt-dev libldb-dev 
+RUN apt-get -y install apache2 apache2-dev flex bison libxml2-dev libcurl4-openssl-dev libjpeg-dev libpng-dev libxpm-dev libpq-dev libicu-dev libfreetype6-dev libldap2-dev libxslt-dev libldb-dev curl
 RUN ln -s /usr/lib/x86_64-linux-gnu/libldap.so /usr/lib/libldap.so && ln -s /usr/lib/x86_64-linux-gnu/liblber.so /usr/lib/liblber.so
 RUN apt-get install build-essential
 
